@@ -4,8 +4,25 @@ body {
 .whiteBox {
   background-color: white;
   width: 80%;
-  display: block;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+.search-field {
+  background-color: #f9f7fd;
+  border: none;
+  width: 35%;
+  padding: 15px 10px;
+  border-radius: 15px;
+}
+.search-button {
+  color: white;
+  background-color: #885df1;
+  border: none;
+  padding: 15px 10px;
+  margin-left: 10px;
+  border-radius: 15px;
 }
 h1 {
+  font-size: 48px;
 }
