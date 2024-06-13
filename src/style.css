@@ -8,21 +8,38 @@ body {
   padding: 20px;
   border-radius: 20px;
 }
+header {
+  border-bottom: 2px solid #f9f7fd;
+  padding: 20px 10px;
+}
 .search-field {
   background-color: #f9f7fd;
   border: none;
-  width: 35%;
+  width: 60%;
   padding: 15px 10px;
   border-radius: 15px;
+  font-size: 16px;
 }
 .search-button {
   color: white;
   background-color: #885df1;
   border: none;
-  padding: 15px 10px;
+  padding: 15px 30px;
   margin-left: 10px;
   border-radius: 15px;
+  font-size: 16px;
 }
 h1 {
   font-size: 48px;
+}
+
+footer {
+  border-top: 2px solid #f9f7fd;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #a8a6b4;
+}
+a {
+  color: #885df1;
 }
