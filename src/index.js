@@ -22,3 +22,5 @@ function searchSubmitForm(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchSubmitForm);
+
+citySearchedWeather("Stuttgart");
