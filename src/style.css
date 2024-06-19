@@ -14,6 +14,10 @@ header {
   border-bottom: 2px solid #f9f7fd;
   padding: 0 0 30px 0;
 }
+.search-align {
+  display: block;
+  margin: 0 auto;
+}
 .search-field {
   background-color: #f9f7fd;
   border: none;
@@ -62,12 +66,13 @@ main {
   color: black;
 }
 .temperature-image {
-  font-size: 40px;
-  margin-top: 35px;
+  width: 100px;
+  height: 100px;
   margin-right: 15px;
 }
 .temperature-value {
   font-size: 88px;
+  font-weight: bold;
 }
 
 .temperature-unit {
