@@ -7,6 +7,9 @@ function updatedData(response) {
   let windValue = document.querySelector("#wind-value");
   let time = document.querySelector("#date-time");
   let date = new Date(response.data.time * 1000);
+  let icon = document.querySelector("#image");
+
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-image" />`;
 
   time.innerHTML = updatedTimeDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
@@ -29,6 +32,10 @@ function updatedTimeDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${day} ${hours}:${minutes}`;
 }
 
