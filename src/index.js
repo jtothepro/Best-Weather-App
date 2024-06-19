@@ -28,7 +28,8 @@ function updatedTimeDate(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDays];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function citySearchedWeather(city) {
