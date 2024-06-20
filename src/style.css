@@ -81,13 +81,28 @@ main {
 }
 
 .weather-forecast {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather-forecast-day-name {
+  font-size: 16px;
+  color: #bababa;
+  text-align: center;
+}
+.weather-forecast-symbol {
   text-align: center;
   margin-top: 10px;
 }
 
-.day-name {
-  font-size: 16px;
-  color: #bababa;
+.weather-forecast-max-temp {
+  font-size: 13px;
+}
+
+.weather-forecast-min-temp {
+  font-size: 13px;
+  opacity: 0.5;
 }
 
 footer {
