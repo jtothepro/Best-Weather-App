@@ -53,7 +53,30 @@ function searchSubmitForm(event) {
   citySearchedWeather(searchFieldInput.value);
 }
 
+function displayForecast() {
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+            <div class="weather-forecast-day-name">
+                <div class="weather-forecast-day">${day}</div>
+                <div class="weather-forecast-symbol">⛅️</div>
+                <div class="weather-forecast-temp">
+                    <span class="weather-forecast-max-temp"> max </span>
+                    <span class="weather-forecast-min-temp"> min </span>
+                </div>
+               `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchSubmitForm);
 
 citySearchedWeather("Stuttgart");
+displayForecast();
