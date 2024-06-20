@@ -80,6 +80,16 @@ main {
   margin-top: 30px;
 }
 
+.weather-forecast {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.day-name {
+  font-size: 16px;
+  color: #bababa;
+}
+
 footer {
   border-top: 2px solid #f9f7fd;
   padding-top: 10px;
