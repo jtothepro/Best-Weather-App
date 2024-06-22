@@ -9,14 +9,14 @@ function updatedData(response) {
   let date = new Date(response.data.time * 1000);
   let icon = document.querySelector("#image");
 
-  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-image" />`;
-
   time.innerHTML = updatedTimeDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
   cityName.innerHTML = response.data.city;
   weatherCondition.innerHTML = response.data.condition.description;
   humidityValue.innerHTML = `${response.data.temperature.humidity}%`;
   windValue.innerHTML = `${response.data.wind.speed} km/h`;
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-image" />`;
+  getForecastData(response.data.city);
 }
 
 function updatedTimeDate(date) {
@@ -51,6 +51,12 @@ function searchSubmitForm(event) {
   let searchFieldInput = document.querySelector("#search-field");
 
   citySearchedWeather(searchFieldInput.value);
+}
+
+function getForecastData(city) {
+  let apiKey = "85be9c7bad2eb4fafc3fe0e35t2o0c3e";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast() {
